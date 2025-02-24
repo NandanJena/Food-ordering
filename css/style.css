@@ -1,0 +1,265 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100vw;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Navigation Bar */
+
+/* Base Navbar Styles */
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: black;
+    padding: 0 20px;
+    z-index: 1000;
+}
+
+#logo img {
+    height: 50px;
+}
+
+/* Menu List */
+#navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+#navbar ul li {
+    padding: 0 20px;
+}
+
+#navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    #navbar {
+        flex-direction: row;
+        padding: 0 10px;
+    }
+
+    #navbar ul {
+        display: none;
+        flex-direction: column;
+        background-color: black;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        text-align: center;
+    }
+
+    #navbar ul li {
+        padding: 15px;
+    }
+
+    #navbar ul li a {
+        font-size: 20px;
+        display: block;
+    }
+    .menu-icon {
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+    }
+
+    #menu-toggle:checked + .menu-icon + ul {
+        display: flex;
+    }
+}
+
+/* Home Section */
+#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 600px;
+    background: url('../images/bg1.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+#home h1 {
+    font-size: 3rem;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#home p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: brown;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Services Section */
+#services-container {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+#services {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.box {
+    width: 300px;
+    background-color: #f2f2f2;
+    border: 2px solid brown;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Clients Section */
+#client-section {
+    width: 100%;
+    background: url('../images/bg2.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#clients {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+#client1{
+    color: white;
+    /* text-shadow: 0px 2px red; */
+    /* margin-bottom: 5px; */
+}
+
+.client-item img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+/* Contact Section */
+#contact {
+    width: 100%;
+    background: url('../images/bg3.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+#client2{
+    color: white;
+}
+
+#contact-box {
+    width: 50%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+#contact-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact-box input,
+#contact-box textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+footer {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    #navbar ul {
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: black;
+        display: none;
+    }
+    
+    #navbar ul li {
+        padding: 10px 0;
+    }
+
+    #services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        width: 90%;
+    }
+
+    #clients {
+        flex-direction: column;
+    }
+
+    #contact-box {
+        width: 90%;
+    }
+}
